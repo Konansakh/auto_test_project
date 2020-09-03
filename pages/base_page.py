@@ -1,10 +1,8 @@
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 import math
-
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from pages.locators import BasePageLocators
 
 
@@ -34,7 +32,6 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
-
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert

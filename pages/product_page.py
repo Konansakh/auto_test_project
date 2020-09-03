@@ -4,7 +4,7 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def add_to_cart(self):
-        add_item = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_LINK)
+        add_item = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_BUTTON)
         add_item.click()
 
     def should_be_successfully_added(self, name):
